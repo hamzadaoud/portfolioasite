@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #00F5FF; /* Electric cyan - primary */
+  --color-primary-50: #E0FFFE; /* Very light cyan - cyan-50 */
+  --color-primary-100: #B3FFFD; /* Light cyan - cyan-100 */
+  --color-primary-200: #80FFFC; /* Medium light cyan - cyan-200 */
+  --color-primary-300: #4DFFFB; /* Medium cyan - cyan-300 */
+  --color-primary-400: #1AFFFA; /* Medium dark cyan - cyan-400 */
+  --color-primary-500: #00F5FF; /* Electric cyan base - cyan-500 */
+  --color-primary-600: #00C4CC; /* Dark cyan - cyan-600 */
+  --color-primary-700: #009399; /* Darker cyan - cyan-700 */
+  --color-primary-800: #006266; /* Very dark cyan - cyan-800 */
+  --color-primary-900: #003133; /* Darkest cyan - cyan-900 */
+
+  /* Secondary Colors */
+  --color-secondary: #FF006E; /* Vibrant magenta - secondary */
+  --color-secondary-50: #FFE0F0; /* Very light magenta - pink-50 */
+  --color-secondary-100: #FFB3D9; /* Light magenta - pink-100 */
+  --color-secondary-200: #FF80C2; /* Medium light magenta - pink-200 */
+  --color-secondary-300: #FF4DAB; /* Medium magenta - pink-300 */
+  --color-secondary-400: #FF1A94; /* Medium dark magenta - pink-400 */
+  --color-secondary-500: #FF006E; /* Vibrant magenta base - pink-500 */
+  --color-secondary-600: #CC0058; /* Dark magenta - pink-600 */
+  --color-secondary-700: #990042; /* Darker magenta - pink-700 */
+  --color-secondary-800: #66002C; /* Very dark magenta - pink-800 */
+  --color-secondary-900: #330016; /* Darkest magenta - pink-900 */
+
+  /* Accent Colors */
+  --color-accent: #7C3AED; /* Deep purple - accent */
+  --color-accent-50: #F3F0FF; /* Very light purple - violet-50 */
+  --color-accent-100: #E0D7FF; /* Light purple - violet-100 */
+  --color-accent-200: #CCBEFF; /* Medium light purple - violet-200 */
+  --color-accent-300: #B8A5FF; /* Medium purple - violet-300 */
+  --color-accent-400: #A48CFF; /* Medium dark purple - violet-400 */
+  --color-accent-500: #7C3AED; /* Deep purple base - violet-500 */
+  --color-accent-600: #632EBE; /* Dark purple - violet-600 */
+  --color-accent-700: #4A228F; /* Darker purple - violet-700 */
+  --color-accent-800: #311660; /* Very dark purple - violet-800 */
+  --color-accent-900: #180A30; /* Darkest purple - violet-900 */
+
+  /* Background Colors */
+  --color-background: #0A0A0F; /* Near-black with blue undertone - slate-900 */
+  --color-background-50: #F8F9FA; /* Very light background - slate-50 */
+  --color-background-100: #E2E8F0; /* Light background - slate-100 */
+  --color-background-200: #CBD5E1; /* Medium light background - slate-200 */
+  --color-background-300: #94A3B8; /* Medium background - slate-300 */
+  --color-background-400: #64748B; /* Medium dark background - slate-400 */
+  --color-background-500: #475569; /* Dark background - slate-500 */
+  --color-background-600: #334155; /* Darker background - slate-600 */
+  --color-background-700: #1E293B; /* Very dark background - slate-700 */
+  --color-background-800: #0F172A; /* Near-black background - slate-800 */
+  --color-background-900: #0A0A0F; /* Near-black with blue undertone - slate-900 */
+
+  /* Surface Colors */
+  --color-surface: #1A1A2E; /* Dark blue-gray - slate-800 */
+  --color-surface-50: #F1F5F9; /* Very light surface - slate-50 */
+  --color-surface-100: #E2E8F0; /* Light surface - slate-100 */
+  --color-surface-200: #CBD5E1; /* Medium light surface - slate-200 */
+  --color-surface-300: #94A3B8; /* Medium surface - slate-300 */
+  --color-surface-400: #64748B; /* Medium dark surface - slate-400 */
+  --color-surface-500: #475569; /* Dark surface - slate-500 */
+  --color-surface-600: #334155; /* Darker surface - slate-600 */
+  --color-surface-700: #1E293B; /* Very dark surface - slate-700 */
+  --color-surface-800: #1A1A2E; /* Dark blue-gray base - slate-800 */
+  --color-surface-900: #0F172A; /* Darkest surface - slate-900 */
+
+  /* Text Colors */
+  --color-text-primary: #FFFFFF; /* Pure white - white */
+  --color-text-secondary: #A0A0B8; /* Muted blue-gray - slate-400 */
+  --color-text-tertiary: #64748B; /* Light muted text - slate-500 */
+  --color-text-quaternary: #475569; /* Very light muted text - slate-600 */
+
+  /* Status Colors */
+  --color-success: #00FF88; /* Bright green - emerald-400 */
+  --color-success-50: #ECFDF5; /* Very light green - emerald-50 */
+  --color-success-100: #D1FAE5; /* Light green - emerald-100 */
+  --color-success-200: #A7F3D0; /* Medium light green - emerald-200 */
+  --color-success-300: #6EE7B7; /* Medium green - emerald-300 */
+  --color-success-400: #00FF88; /* Bright green base - emerald-400 */
+  --color-success-500: #10B981; /* Standard green - emerald-500 */
+  --color-success-600: #059669; /* Dark green - emerald-600 */
+  --color-success-700: #047857; /* Darker green - emerald-700 */
+  --color-success-800: #065F46; /* Very dark green - emerald-800 */
+  --color-success-900: #064E3B; /* Darkest green - emerald-900 */
+
+  --color-warning: #FFB800; /* Amber - amber-500 */
+  --color-warning-50: #FFFBEB; /* Very light amber - amber-50 */
+  --color-warning-100: #FEF3C7; /* Light amber - amber-100 */
+  --color-warning-200: #FDE68A; /* Medium light amber - amber-200 */
+  --color-warning-300: #FCD34D; /* Medium amber - amber-300 */
+  --color-warning-400: #FBBF24; /* Medium dark amber - amber-400 */
+  --color-warning-500: #FFB800; /* Amber base - amber-500 */
+  --color-warning-600: #D97706; /* Dark amber - amber-600 */
+  --color-warning-700: #B45309; /* Darker amber - amber-700 */
+  --color-warning-800: #92400E; /* Very dark amber - amber-800 */
+  --color-warning-900: #78350F; /* Darkest amber - amber-900 */
+
+  --color-error: #FF3366; /* Coral red - red-500 */
+  --color-error-50: #FEF2F2; /* Very light red - red-50 */
+  --color-error-100: #FEE2E2; /* Light red - red-100 */
+  --color-error-200: #FECACA; /* Medium light red - red-200 */
+  --color-error-300: #FCA5A5; /* Medium red - red-300 */
+  --color-error-400: #F87171; /* Medium dark red - red-400 */
+  --color-error-500: #FF3366; /* Coral red base - red-500 */
+  --color-error-600: #DC2626; /* Dark red - red-600 */
+  --color-error-700: #B91C1C; /* Darker red - red-700 */
+  --color-error-800: #991B1B; /* Very dark red - red-800 */
+  --color-error-900: #7F1D1D; /* Darkest red - red-900 */
+}
+
+@layer base {
+*  {
+    
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .font-heading {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-caption {
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+  }
+
+  .neon-glow-secondary {
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
+  }
+
+  .neon-glow-accent {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+  }
+
+  .glitch-effect {
+    animation: glitch 100ms ease-in-out;
+  }
+
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+  }
+
+  .gradient-border {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+    padding: 1px;
+  }
+
+  .gradient-border-inner {
+    background: var(--color-background);
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-major {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-state {
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .transition-smooth,
+    .transition-major,
+    .transition-state {
+      transition: none;
+    }
+  }
+}
