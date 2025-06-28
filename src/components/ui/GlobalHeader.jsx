@@ -144,7 +144,8 @@ const GlobalHeader = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-16 z-1100 bg-background/98 backdrop-blur-xl">
+        <div className="md:hidden fixed inset-0 top-16 z-1100 bg-white/30 dark:bg-black/30 backdrop-blur-md shadow-xl border-t border-white/20 dark:border-black/20">
+
           <nav className="px-4 py-6 space-y-2">
             {navigationItems.map((item) => (
               <Link
