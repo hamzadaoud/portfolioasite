@@ -142,10 +142,9 @@ const GlobalHeader = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - Glassmorphic style */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-16 z-1100 bg-white/30 dark:bg-black/30 backdrop-blur-md shadow-xl border-t border-white/20 dark:border-black/20">
-
+        <div className="md:hidden fixed inset-0 top-16 z-1100 bg-gradient-to-br from-surface/60 to-surface/80 backdrop-blur-lg border-t border-white/10 dark:border-white/10 ring-1 ring-white/20 dark:ring-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]">
           <nav className="px-4 py-6 space-y-2">
             {navigationItems.map((item) => (
               <Link
