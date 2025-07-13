@@ -7,7 +7,7 @@ const ContactSidebar = () => {
       icon: 'Mail',
       label: 'Email',
       value: 'hello@gamedev.portfolio',
-      href: 'mailto:hello@gamedev.portfolio',
+      href: 'mailto:hamzadaoudbn@gmail.com,
       description: 'Best for detailed inquiries'
     },
     {
@@ -20,8 +20,8 @@ const ContactSidebar = () => {
     {
       icon: 'Phone',
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+212644857115',
+      href: 'tel:+212644857115',
       description: 'Available Mon-Fri, 9AM-6PM PST'
     }
   ];
@@ -30,13 +30,13 @@ const ContactSidebar = () => {
     {
       icon: 'Github',
       label: 'GitHub',
-      href: 'https://github.com/gamedev',
+      href: 'https://github.com/hamzadaoud',
       color: 'text-text-secondary hover:text-primary'
     },
     {
       icon: 'Linkedin',
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/gamedev',
+      href: 'https://www.linkedin.com/in/hamza-daoud-419a45184?originalSubdomain=ma',
       color: 'text-text-secondary hover:text-primary'
     },
     {
