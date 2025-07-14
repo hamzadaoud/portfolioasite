@@ -117,25 +117,43 @@ const ContactForm = ({ onSubmit, isSubmitted }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    if (validateForm()) {
-      onSubmit(formData);
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        inquiryType: '',
-        projectTitle: '',
-        description: '',
-        timeline: '',
-        budget: '',
-        files: []
-      });
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  if (!validateForm()) return;
+
+  try {
+    const res = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+
+    if (res.ok) {
+      onSubmit(formData); // optional success logic
+      alert('Your message was sent successfully!');
+    } else {
+      alert('Failed to send message.');
     }
-  };
+
+  } catch (error) {
+    console.error('Error sending email:', error);
+    alert('Something went wrong.');
+  }
+
+  // Clear form
+  setFormData({
+    name: '',
+    email: '',
+    company: '',
+    inquiryType: '',
+    projectTitle: '',
+    description: '',
+    timeline: '',
+    budget: '',
+    files: []
+  });
+};
+
 
   return (
     <div className="bg-surface/50 backdrop-blur-sm rounded-2xl border border-accent/20 p-8 shadow-neon">
