@@ -3,13 +3,14 @@ import Icon from 'components/AppIcon';
 
 const ContactSidebar = () => {
   const contactMethods = [
-    {
-      icon: 'Mail',
-      label: 'Email',
-      value: 'hello@gamedev.portfolio',
-      href: href: 'mailto:hamzadaoudbn@gmail.com',
-      description: 'Best for detailed inquiries'
-    },
+   {
+  icon: 'Mail',
+  label: 'Email',
+  value: 'hello@gamedev.portfolio',
+  href: 'mailto:hamzadaoudbn@gmail.com',
+  description: 'Best for detailed inquiries'
+},
+
     {
       icon: 'MessageSquare',
       label: 'Discord',
