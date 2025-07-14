@@ -139,42 +139,49 @@ const GlobalHeader = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay - Glassmorphic style */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-16 z-1100 bg-white/20 dark:bg-black/30 backdrop-blur-3xl border-t border-white/10 shadow-2xl ring-1 ring-white/10 transition-all duration-300">
-          <nav className="px-4 py-6 space-y-2">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`group flex items-center space-x-3 px-4 py-3 rounded-lg font-body font-medium transition-all duration-300 ${isActiveRoute(item.path)
-                    ? 'text-primary bg-primary/10 shadow-md'
-                    : 'text-text-primary hover:text-primary hover:bg-primary/10'
-                  }`}
-              >
-                <Icon
-                  name={item.icon}
-                  size={20}
-                  className={`transition-colors duration-300 ${isActiveRoute(item.path)
-                      ? 'text-primary'
-                      : 'text-text-tertiary group-hover:text-primary'
-                    }`}
-                />
-                <div>
-                  <div className="text-base">{item.label}</div>
-                  <div className="text-xs text-text-tertiary font-caption">
-                    {item.description}
-                  </div>
-                </div>
-                {isActiveRoute(item.path) && (
-                  <div className="ml-auto w-2 h-2 bg-primary rounded-full shadow" />
-                )}
-              </Link>
-
-            ))}
-          </nav>
-        </div>
-      )}
+      {/* Mobile Menu Overlay - Enhanced Glassmorphic style */}
+{isMobileMenuOpen && (
+  <div className="md:hidden fixed inset-0 top-16 z-1100 bg-gradient-to-br from-surface/90 to-surface/95 backdrop-blur-xl border-t border-accent/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.2)]">
+    <nav className="px-4 py-6 space-y-3">
+      {navigationItems.map((item) => (
+        <Link
+          key={item.path}
+          to={item.path}
+          className={`group flex items-center space-x-3 px-4 py-3 rounded-xl font-body font-medium transition-all duration-300 ${
+            isActiveRoute(item.path)
+              ? 'text-primary bg-primary/10 shadow-neon border border-primary/20'
+              : 'text-text-primary hover:text-primary bg-white/5 hover:bg-primary/5 border border-white/5 hover:border-primary/10'
+          }`}
+        >
+          <div className={`p-2 rounded-lg ${
+            isActiveRoute(item.path)
+              ? 'bg-primary/10 text-primary'
+              : 'bg-white/5 text-text-secondary group-hover:bg-primary/5 group-hover:text-primary'
+          }`}>
+            <Icon 
+              name={item.icon} 
+              size={20} 
+              className="transition-colors duration-300"
+            />
+          </div>
+          <div className="flex-1">
+            <div className="text-base">{item.label}</div>
+            <div className={`text-xs ${
+              isActiveRoute(item.path)
+                ? 'text-primary/80'
+                : 'text-text-tertiary group-hover:text-primary/70'
+            }`}>
+              {item.description}
+            </div>
+          </div>
+          {isActiveRoute(item.path) && (
+            <div className="w-2 h-2 bg-primary rounded-full shadow-neon"></div>
+          )}
+        </Link>
+      ))}
+    </nav>
+  </div>
+)}
     </header>
   );
 };
