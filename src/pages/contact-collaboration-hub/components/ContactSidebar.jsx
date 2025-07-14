@@ -7,7 +7,7 @@ const ContactSidebar = () => {
       icon: 'Mail',
       label: 'Email',
       value: 'hello@gamedev.portfolio',
-      href: 'mailto:hamzadaoudbn@gmail.com,
+      href: href: 'mailto:hamzadaoudbn@gmail.com',
       description: 'Best for detailed inquiries'
     },
     {
