@@ -133,10 +133,10 @@ const ContactCollaborationHub = () => {
                 <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                   <Icon name="Gamepad2" size={20} className="text-background" />
                 </div>
-                <span className="font-heading text-xl font-bold text-text-primary">GameDev Portfolio</span>
+                <span className="font-heading text-xl font-bold text-text-primary">Hamza Daoud</span>
               </div>
               <p className="font-body text-text-secondary">
-                © {new Date().getFullYear()} GameDev Portfolio. All rights reserved.
+                © {new Date().getFullYear()} Hamza Daoud. All rights reserved.
               </p>
             </div>
           </div>

@@ -189,7 +189,7 @@ const PortfolioHomeDashboard = () => {
           </div>
           <div className="mt-6 pt-6 border-t border-accent/20 text-center">
             <p className="font-body text-sm text-text-tertiary">
-              © {new Date().getFullYear()} GameDev Portfolio. All rights reserved.
+              © {new Date().getFullYear()} Hamza Daoud. All rights reserved.
             </p>
           </div>
         </div>

@@ -62,26 +62,25 @@ const GlobalHeader = () => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-1000 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-surface/95 backdrop-blur-md shadow-neon' 
+    <header
+      className={`fixed top-0 left-0 right-0 z-1000 transition-all duration-300 ${isScrolled
+          ? 'bg-surface/95 backdrop-blur-md shadow-neon'
           : 'bg-surface/80 backdrop-blur-sm'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            to="/portfolio-home-dashboard" 
+          <Link
+            to="/portfolio-home-dashboard"
             className="flex items-center space-x-3 group"
           >
             <div className="relative">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-neon group-hover:shadow-neon-lg transition-all duration-300">
-                <Icon 
-                  name="Gamepad2" 
-                  size={24} 
-                  className="text-background group-hover:scale-110 transition-transform duration-300" 
+                <Icon
+                  name="Gamepad2"
+                  size={24}
+                  className="text-background group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
@@ -102,21 +101,19 @@ const GlobalHeader = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`group relative px-4 py-2 rounded-lg font-body font-medium transition-all duration-300 ${
-                  isActiveRoute(item.path)
+                className={`group relative px-4 py-2 rounded-lg font-body font-medium transition-all duration-300 ${isActiveRoute(item.path)
                     ? 'text-primary bg-primary/10 shadow-neon'
                     : 'text-text-secondary hover:text-primary hover:bg-primary/5'
-                }`}
+                  }`}
                 title={item.description}
               >
                 <div className="flex items-center space-x-2">
-                  <Icon 
-                    name={item.icon} 
-                    size={18} 
-                    className={`transition-all duration-300 ${
-                      isActiveRoute(item.path) 
-                        ? 'text-primary' :'text-text-secondary group-hover:text-primary'
-                    }`}
+                  <Icon
+                    name={item.icon}
+                    size={18}
+                    className={`transition-all duration-300 ${isActiveRoute(item.path)
+                        ? 'text-primary' : 'text-text-secondary group-hover:text-primary'
+                      }`}
                   />
                   <span>{item.label}</span>
                 </div>
@@ -133,9 +130,9 @@ const GlobalHeader = () => {
             className="md:hidden p-2 rounded-lg text-text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-300"
             aria-label="Toggle mobile menu"
           >
-            <Icon 
-              name={isMobileMenuOpen ? 'X' : 'Menu'} 
-              size={24} 
+            <Icon
+              name={isMobileMenuOpen ? 'X' : 'Menu'}
+              size={24}
               className="transition-transform duration-300"
             />
           </button>
@@ -144,37 +141,35 @@ const GlobalHeader = () => {
 
       {/* Mobile Menu Overlay - Glassmorphic style */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-16 z-1100 bg-gradient-to-br from-background/70 to-surface/90 backdrop-blur-xl border-t border-white/10 ring-1 ring-white/20 shadow-lg dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-colors duration-300">
+        <div className="md:hidden fixed inset-0 top-16 z-1100 bg-white/20 dark:bg-black/30 backdrop-blur-3xl border-t border-white/10 shadow-2xl ring-1 ring-white/10 transition-all duration-300">
           <nav className="px-4 py-6 space-y-2">
             {navigationItems.map((item) => (
               <Link
-  key={item.path}
-  to={item.path}
-  className={`group flex items-center space-x-3 px-4 py-3 rounded-lg font-body font-medium transition-all duration-300 ${
-    isActiveRoute(item.path)
-      ? 'text-primary bg-primary/10 shadow-md'
-      : 'text-text-primary hover:text-primary hover:bg-primary/10'
-  }`}
->
-  <Icon 
-    name={item.icon} 
-    size={20} 
-    className={`transition-colors duration-300 ${
-      isActiveRoute(item.path) 
-        ? 'text-primary' 
-        : 'text-text-tertiary group-hover:text-primary'
-    }`}
-  />
-  <div>
-    <div className="text-base">{item.label}</div>
-    <div className="text-xs text-text-tertiary font-caption">
-      {item.description}
-    </div>
-  </div>
-  {isActiveRoute(item.path) && (
-    <div className="ml-auto w-2 h-2 bg-primary rounded-full shadow" />
-  )}
-</Link>
+                key={item.path}
+                to={item.path}
+                className={`group flex items-center space-x-3 px-4 py-3 rounded-lg font-body font-medium transition-all duration-300 ${isActiveRoute(item.path)
+                    ? 'text-primary bg-primary/10 shadow-md'
+                    : 'text-text-primary hover:text-primary hover:bg-primary/10'
+                  }`}
+              >
+                <Icon
+                  name={item.icon}
+                  size={20}
+                  className={`transition-colors duration-300 ${isActiveRoute(item.path)
+                      ? 'text-primary'
+                      : 'text-text-tertiary group-hover:text-primary'
+                    }`}
+                />
+                <div>
+                  <div className="text-base">{item.label}</div>
+                  <div className="text-xs text-text-tertiary font-caption">
+                    {item.description}
+                  </div>
+                </div>
+                {isActiveRoute(item.path) && (
+                  <div className="ml-auto w-2 h-2 bg-primary rounded-full shadow" />
+                )}
+              </Link>
 
             ))}
           </nav>
