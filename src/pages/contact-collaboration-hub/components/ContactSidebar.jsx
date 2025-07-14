@@ -186,7 +186,7 @@ const ContactSidebar = () => {
             Download my complete portfolio, resume, and project assets
           </p>
           <button className="w-full px-4 py-3 bg-gradient-to-r from-primary to-secondary rounded-lg font-body font-medium text-background hover:shadow-neon transition-all duration-300">
-            Download Media Kit
+            Download Media Kit (sson)
           </button>
         </div>
       </div>
@@ -202,10 +202,10 @@ const ContactSidebar = () => {
             <Icon name="MapPin" size={20} className="text-primary" />
             <div>
               <div className="font-body font-medium text-text-primary">
-                San Francisco, CA
+                Marrakech, MO
               </div>
               <div className="font-caption text-sm text-text-tertiary">
-                Pacific Standard Time (PST)
+                GMT
               </div>
             </div>
           </div>
