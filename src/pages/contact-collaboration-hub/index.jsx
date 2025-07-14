@@ -98,21 +98,7 @@ const ContactCollaborationHub = () => {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-16 bg-surface/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary mb-4">
-                What Clients Say
-              </h2>
-              <p className="font-body text-lg text-text-secondary">
-                Testimonials from satisfied clients and collaborators
-              </p>
-            </div>
-            
-            <TestimonialsCarousel />
-          </div>
-        </section>
+        
 
         {/* Success Modal */}
         {isFormSubmitted && (
