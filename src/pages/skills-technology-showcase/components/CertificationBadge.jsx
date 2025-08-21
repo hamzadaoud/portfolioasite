@@ -14,8 +14,8 @@ const CertificationBadge = ({ certification }) => {
       
       {/* Verification badge */}
       {certification.verified && (
-        <div className="absolute top-3 right-3 flex items-center space-x-1 bg-success/20 text-success px-2 py-1 rounded-full text-xs font-caption">
-          <Icon name="CheckCircle" size={12} />
+        <div className="absolute top-3 right-3 flex items-center space-x-1 bg-success/20 text-success px-2 py-1 rounded-full text-sm font-caption">
+          <Icon name="CheckCircle" size={14} />
           <span>Verified</span>
         </div>
       )}
@@ -33,20 +33,20 @@ const CertificationBadge = ({ certification }) => {
             </div>
             {certification.verified && (
               <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-success rounded-full flex items-center justify-center border-2 border-surface">
-                <Icon name="Check" size={12} className="text-background" />
+                <Icon name="Check" size={14} className="text-background" />
               </div>
             )}
           </div>
           
           <div className="flex-1">
-            <h3 className="font-heading text-lg font-bold text-text-primary group-hover:text-success transition-colors duration-300 mb-1">
+            <h3 className="font-heading text-xl font-bold text-text-primary group-hover:text-success transition-colors duration-300 mb-1">
               {certification.name}
             </h3>
-            <p className="font-body text-sm text-text-secondary mb-2">
+            <p className="font-body text-base text-text-secondary mb-2">
               {certification.issuer}
             </p>
-            <div className="flex items-center space-x-2 text-xs text-text-tertiary">
-              <Icon name="Calendar" size={12} />
+            <div className="flex items-center space-x-2 text-sm text-text-tertiary">
+              <Icon name="Calendar" size={14} />
               <span>Issued {certification.date}</span>
             </div>
           </div>
@@ -55,12 +55,12 @@ const CertificationBadge = ({ certification }) => {
         {/* Achievement indicators */}
         <div className="flex items-center justify-between pt-4 border-t border-accent/20">
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-1 text-xs text-text-tertiary">
-              <Icon name="Award" size={12} className="text-success" />
+            <div className="flex items-center space-x-1 text-sm text-text-tertiary">
+              <Icon name="Award" size={14} className="text-success" />
               <span>Professional</span>
             </div>
-            <div className="flex items-center space-x-1 text-xs text-text-tertiary">
-              <Icon name="Shield" size={12} className="text-primary" />
+            <div className="flex items-center space-x-1 text-sm text-text-tertiary">
+              <Icon name="Shield" size={14} className="text-primary" />
               <span>Industry Standard</span>
             </div>
           </div>
@@ -71,7 +71,7 @@ const CertificationBadge = ({ certification }) => {
             className="p-2 rounded-lg bg-success/10 text-success hover:bg-success/20 transition-colors duration-300"
             title="View Certificate"
           >
-            <Icon name="ExternalLink" size={14} />
+            <Icon name="ExternalLink" size={16} />
           </motion.button>
         </div>
 
@@ -86,26 +86,4 @@ const CertificationBadge = ({ certification }) => {
   );
 };
 
-// Example usage with your BA degree
-const CertificationsList = () => {
-  const certifications = [
-    {
-      name: "BA in English Literature",
-      issuer: "Cadi Ayyad University",
-      date: "2025",
-      image: "/images/english-literature.png", // put your image path here
-      verified: true,
-    },
-    // you can add more certifications here...
-  ];
-
-  return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {certifications.map((cert, index) => (
-        <CertificationBadge key={index} certification={cert} />
-      ))}
-    </div>
-  );
-};
-
-export default CertificationsList;
+export default CertificationBadge;
