@@ -50,10 +50,21 @@ const AchievementsTimeline = () => {
     },
     {
       id: 5,
-      year: '2021',
+      year: '2023',
       title: 'DEUG in English Literature',
       company: 'Cadi Ayyad University',
       description: `Completed a Bac+2 degree in English Studies while exploring programming and building a future in tech and gaming.`,
+      type: 'education',
+      icon: 'GraduationCap',
+      color: 'warning',
+      featured: false
+    },
+    {
+      id: 5,
+      year: '2025',
+      title: 'BA in English Literature',
+      company: 'Cadi Ayyad University',
+      description: `Completed my Bachelor\'s degree in English Studies while exploring programming and building a future in tech and gaming.`,
       type: 'education',
       icon: 'GraduationCap',
       color: 'warning',
