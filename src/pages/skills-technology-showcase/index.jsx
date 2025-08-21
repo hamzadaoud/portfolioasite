@@ -156,20 +156,20 @@ const categories = [
     image: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/University_Cadi_Ayyad_logo.png',
     verified: true
   },
-   {
-    id: 'BA-in-english',
-    name: 'Bachelor\'s in English Literature',
-    issuer: 'Cadi Ayyad University',
-    date: '2025',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/University_Cadi_Ayyad_logo.png',
-    verified: true
-  },
   {
     id: 'bac2-dev',
     name: 'Bac+2 in Software Development',
     issuer: 'ISTA / OFPPT Morocco',
     date: '2024',
     image: 'https://upload.wikimedia.org/wikipedia/fr/2/26/OFPPT_Logo.svg',
+    verified: true
+  },
+   {
+    id: 'BA-in-english',
+    name: 'Bachelor\'s in English Literature',
+    issuer: 'Cadi Ayyad University',
+    date: '2025',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/University_Cadi_Ayyad_logo.png',
     verified: true
   }
 ];
