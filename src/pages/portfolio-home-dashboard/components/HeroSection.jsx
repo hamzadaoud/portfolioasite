@@ -29,7 +29,7 @@ const HeroSection = () => {
     location: "Marrakech, Morocco",
     experience: "3+ Years",
     projectsCompleted: "10+",
-    bio: `Passionate game developer and Unity 3D specialist with extensive experience in C# programming and game design. Skilled in creating immersive and engaging video games with a strong focus on innovation, performance, and player experience. Dedicated to building a successful video game company in Morocco.`,
+    bio: `Passionate game developer and Unity 3D specialist with extensive experience in C# programming and game design. Skilled in creating immersive and engaging video games with a strong focus on innovation, performance, and player experience. In addition to development, I have experience in digital marketing and user acquisition, applying strategies to promote projects online. Dedicated to building a successful video game company in Morocco.`,
     avatar: "https://i.imgur.com/your-avatar.jpg" // Replace with your actual image URL
   };
 
