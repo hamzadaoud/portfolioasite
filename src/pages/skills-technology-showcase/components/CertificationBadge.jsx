@@ -86,4 +86,26 @@ const CertificationBadge = ({ certification }) => {
   );
 };
 
-export default CertificationBadge;
+// Example usage with your BA degree
+const CertificationsList = () => {
+  const certifications = [
+    {
+      name: "BA in English Literature",
+      issuer: "Cadi Ayyad University",
+      date: "2025",
+      image: "/images/english-literature.png", // put your image path here
+      verified: true,
+    },
+    // you can add more certifications here...
+  ];
+
+  return (
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {certifications.map((cert, index) => (
+        <CertificationBadge key={index} certification={cert} />
+      ))}
+    </div>
+  );
+};
+
+export default CertificationsList;
